@@ -1,4 +1,4 @@
-# RTPS-Streams-VLC
+# RTSP-Streams-VLC
 PowerShell script to manage multiple RTSP streams with VLC. Originally written for use with my personal WYZE cameras when RTSP was released in 2019
 
 We use VLC to get many RTSP streams from local cameras, and then send them to various outputs including:
