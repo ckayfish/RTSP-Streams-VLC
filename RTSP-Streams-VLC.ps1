@@ -63,7 +63,7 @@ $pathToSaveFiles = "G:\CameraStreams\"
 
 # Stream transcode, either ogg or mp4
 # *Will default to OGG if not set to "mp4"
-$transcode = "mg4"
+$transcode = "mp4"
 
 # Select which features to use. 1 is ON/True and 0 is OFF/False
 # *Requires at least one of these set to 1. Default is Play in VLC
@@ -95,8 +95,8 @@ Write-Host "Getting camera streams..."
 
 #Set the transcoding information to pass in a VLC parameter
 if ($convertToHttp -and ($transcode.ToUpper() -ne "OGG")) {
-Write-Host "When converting stream to HTTP, OGG must be used. Changing transcode from $transcode to OGG"
-$transcode = "OGG"
+    Write-Host "When converting stream to HTTP, OGG must be used. Changing transcode from $transcode to OGG"
+    $transcode = "OGG"
 }
 if ($transcode.ToUpper() -eq "MP4") {
     $trans = ":sout=#transcode{acodec=mpga,ab=128,channels=2,samplerate=44100,scodec=none}"
